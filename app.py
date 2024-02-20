@@ -1,5 +1,5 @@
-def fun(a,b):
-    return a+b
+def fun(a,b,c):
+    return a+b+c
 
 def sum(a,b,c):
     return a+b+c
