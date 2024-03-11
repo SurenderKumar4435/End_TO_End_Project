@@ -1,11 +1,27 @@
-def fun(a,b,c):
-    return a+b+c
+from flask import Flask,request
 
-def sum(a,b,c):
-    return a+b+c
+app  = Flask(__name__)
 
-def fun2(a,b,c):
-    return a-b-c
+@app.route("/",methods=["GET"])
+def hello():
+    return "<h1>Hello Surender Kumar you are welcome</h1> !"
 
-def division(a,b):
-    return a/b
+
+
+@app.route("/welcome",methods=["GET"])
+def welcome():
+    return "Hello Surender Kumar you are welcome2 !"
+
+@app.route("/success/<score>")
+def success(score):
+    return "Hello Surender Kumar you are  marks {} ".format(score)
+
+
+
+@app.route("/fail/<score>")
+def success(score):
+    return "Hello Surender Kumar you are  marks {} ".format(score)
+
+
+if __name__=="__main__":
+    app.run(debug= True)
