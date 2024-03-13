@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        <h1>Data prediction</h1>
+
+         
+            <form action="{{url_for('predict_datapoint')}}" method="post">
+                <input type="text" name="PassengerId" placeholder="PassengerId" required="required"  /><br>
+                <input type="text" name="Pclass" placeholder="Pclass" required="required"  /><br>
+                <input type="text" name="Age" placeholder="Age" required="required"  /><br>
+                <input type="text" name="SibSp" placeholder="SibSp" required="required"  /><br>
+                <input type="text" name="Parch" placeholder="Parch" required="required"  /><br>
+                <input type="text" name="Fare" placeholder="Fare" required="required"  /><br>
+                <input type="text" name="Sex_female" placeholder="Sex_female" required="required"  /><br>
+                <input type="text" name="Sex_male" placeholder="Sex_male" required="required"  /><br>
+                <input type="text" name="Embarked_C" placeholder="Embarked_C" required="required"  /><br>
+                <input type="text" name="Embarked_Q" placeholder="Embarked_Q" required="required"  /><br>
+                <input type="text" name="Embarked_S" placeholder="Embarked_S" required="required"  /><br>
+                
+                
+                
+    
+    
+                <button type="submit" class="btn-block btn-large">Predict</button>
+    
+            </form>
+         <h2>
+            THE FMI PREDICTION IS:{{result}}
+         </h2>
+
+            
+        
+    </div>
+</body>
+</html>
