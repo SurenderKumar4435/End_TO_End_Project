@@ -5,7 +5,8 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 #from sklearn.tree import DecisionTreeRegressor
 
-app  = Flask(__name__)
+application  = Flask(__name__)
+app = application
 
 ## import pkl file----------------->>>>>>>>>
 regress_model = pickle.load(open("regress2.pkl","rb"))
